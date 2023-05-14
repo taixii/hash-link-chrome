@@ -1,11 +1,14 @@
 {
   "short_name": "HL",
   "name": "HASHLINK",
-  "icons": { "512": "logo.png" },
+  "icons": { "512": "hashlink-logo1.png" },
   "version": "1.0.0",
   "manifest_version": 3,
   "background": { "service_worker": "background.js" },
-  "permissions": ["storage"],
+  "permissions": ["storage", "tabs", "activeTab"],
+  "host_permissions" : [
+    "https://*/*"
+  ],
   "action": {
     "default_popup": "index.html"
   }

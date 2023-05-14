@@ -24,3 +24,11 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
 export default firebase;
+type Data = {
+  hashtag: string,
+  url: string;
+}
+export const saveUserData = (data: Data) => {
+  // Firebase에 데이터 저장 로직 구현
+  dbService.collection("users").add(data);
+};
